@@ -26,8 +26,8 @@ Converts a CRS definition to a
 [Spatial Reference System Identifier](https://en.wikipedia.org/wiki/SRID) (SRID).
 
 ```php
-echo GeoIO\CRS\def_to_srid('urn:ogc:def:crs:OGC:1.3:CRS84')."\n;
-echo GeoIO\CRS\def_to_srid('http://spatialreference.org/ref/epsg/4322')."\n;
+echo GeoIO\CRS\def_to_srid('urn:ogc:def:crs:OGC:1.3:CRS84')."\n";
+echo GeoIO\CRS\def_to_srid('http://spatialreference.org/ref/epsg/4322')."\n";
 ```
 
 The above example will producte the following output.
@@ -46,8 +46,8 @@ Converts a [Spatial Reference System Identifier](https://en.wikipedia.org/wiki/S
 (SRID) to an URN.
 
 ```php
-echo GeoIO\CRS\srid_to_urn(4326)."\n;
-echo GeoIO\CRS\srid_to_urn(4322)."\n;
+echo GeoIO\CRS\srid_to_urn(4326)."\n";
+echo GeoIO\CRS\srid_to_urn(4322)."\n";
 ```
 
 The above example will produce the following output.
