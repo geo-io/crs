@@ -40,14 +40,14 @@ The above example will producte the following output.
 If the definition can't be converted to a SRID, it throws a 
 `GeoIO\CRS\Exception\UnknownDefinitionException`.
 
-### `def_to_srid`
+### `srid_to_urn`
 
 Converts a [Spatial Reference System Identifier](https://en.wikipedia.org/wiki/SRID) 
 (SRID) to an URN.
 
 ```php
-echo GeoIO\CRS\srid_to_urn(4326);
-echo GeoIO\CRS\srid_to_urn(4322);
+echo GeoIO\CRS\srid_to_urn(4326)."\n;
+echo GeoIO\CRS\srid_to_urn(4322)."\n;
 ```
 
 The above example will produce the following output.
