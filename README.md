@@ -2,7 +2,7 @@ Geo I/O CRS
 ===========
 
 [![Build Status](https://travis-ci.org/geo-io/crs.svg?branch=master)](https://travis-ci.org/geo-io/crs)
-[![Coverage Status](https://img.shields.io/coveralls/geo-io/crs.svg?style=flat)](https://coveralls.io/r/geo-io/crs)
+[![Coverage Status](https://coveralls.io/repos/github/geo-io/crs/badge.svg?branch=master)](https://coveralls.io/github/geo-io/crs?branch=master)
 
 [Coordinate Reference System](https://en.wikipedia.org/wiki/Spatial_reference_system) (CRS) utilities.
 
