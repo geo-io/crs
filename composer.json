@@ -1,0 +1,35 @@
+{
+    "name": "geo-io/crs",
+    "description": "Coordinate Reference System (CRS) utilities.",
+    "keywords": [
+        "geo",
+        "io",
+        "spatial",
+        "crs",
+        "srs",
+        "srid"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jan Sorgalla",
+            "email": "jsorgalla@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "GeoIO\\CRS\\": "src/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
