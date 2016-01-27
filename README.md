@@ -30,7 +30,7 @@ echo GeoIO\CRS\def_to_srid('urn:ogc:def:crs:OGC:1.3:CRS84')."\n";
 echo GeoIO\CRS\def_to_srid('http://spatialreference.org/ref/epsg/4322')."\n";
 ```
 
-The above example will producte the following output.
+The above example will produce the following output.
 
 ```
 4326
