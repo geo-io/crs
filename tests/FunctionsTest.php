@@ -2,15 +2,16 @@
 
 namespace GeoIO\CRS;
 
-class FunctionsTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+use GeoIO\CRS\Exception\UnknownDefinitionException;
+
+class FunctionsTest extends TestCase
 {
     /**
      * @test
      * @dataProvider crsToSridDataProvider
-     *
-     * @covers ::GeoIO\CRS\def_to_srid
      */
-    public function it_converts_def_to_srid($def, $srid)
+    public function it_converts_def_to_srid($def, $srid): void
     {
         $this->assertSame(
             $srid,
@@ -20,21 +21,18 @@ class FunctionsTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers ::GeoIO\CRS\def_to_srid
-     * @covers GeoIO\CRS\Exception\UnknownDefinitionException
      */
-    public function it_throws_exception_for_unknown_crs()
+    public function it_throws_exception_for_unknown_crs(): void
     {
-        $this->setExpectedException('GeoIO\CRS\Exception\UnknownDefinitionException');
+        $this->expectException(UnknownDefinitionException::class);
 
         def_to_srid('foo');
     }
 
     /**
      * @test
-     * @covers ::GeoIO\CRS\srid_to_urn
      */
-    public function it_converts_srid_to_crn()
+    public function it_converts_srid_to_crn(): void
     {
         $this->assertSame(
             'urn:ogc:def:crs:OGC:1.3:CRS84',
@@ -47,51 +45,56 @@ class FunctionsTest extends \PHPUnit_Framework_TestCase
         );
     }
 
-    public function crsToSridDataProvider()
+    public function crsToSridDataProvider(): iterable
     {
-        $data = array(
-            array(
-                'urn:ogc:def:crs:OGC:1.3:CRS84',
-                4326,
-            ),
-            array(
-                'EPSG:4326',
-                4326,
-            ),
-            array(
-                'urn:ogc:def:crs:EPSG:4326',
-                4326,
-            ),
-            array(
-                'urn:ogc:def:crs:EPSG::4326',
-                4326,
-            ),
-            array(
-                'urn:ogc:def:crs:EPSG:6.6:4326',
-                4326,
-            ),
-            array(
-                'urn:x-ogc:def:crs:EPSG:6.6:4326',
-                4326,
-            ),
-            array(
-                'urn:EPSG:geographicCRS:4326',
-                4326,
-            ),
-            array(
-                'http://www.opengis.net/gml/srs/epsg.xml#4326',
-                4326,
-            ),
-            array(
-                'http://spatialreference.org/ref/epsg/4326',
-                4326,
-            ),
-            array(
-                'http://spatialreference.org/ref/epsg/4326/',
-                4326,
-            ),
-        );
+        yield [
+            'urn:ogc:def:crs:OGC:1.3:CRS84',
+            4326,
+        ];
 
-        return $data;
+        yield [
+            'EPSG:4326',
+            4326,
+        ];
+
+        yield [
+            'urn:ogc:def:crs:EPSG:4326',
+            4326,
+        ];
+
+        yield [
+            'urn:ogc:def:crs:EPSG::4326',
+            4326,
+        ];
+
+        yield [
+            'urn:ogc:def:crs:EPSG:6.6:4326',
+            4326,
+        ];
+
+        yield [
+            'urn:x-ogc:def:crs:EPSG:6.6:4326',
+            4326,
+        ];
+
+        yield [
+            'urn:EPSG:geographicCRS:4326',
+            4326,
+        ];
+
+        yield [
+            'http://www.opengis.net/gml/srs/epsg.xml#4326',
+            4326,
+        ];
+
+        yield [
+            'http://spatialreference.org/ref/epsg/4326',
+            4326,
+        ];
+
+        yield [
+            'http://spatialreference.org/ref/epsg/4326/',
+            4326,
+        ];
     }
 }
