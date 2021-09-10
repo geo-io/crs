@@ -8,6 +8,7 @@ use GeoIO\CRS\Exception\UnknownDefinitionException;
 
 function def_to_srid(string $def): int
 {
+    /** @var array<string, int> $urnMap */
     static $urnMap = [
         'urn:ogc:def:crs:OGC:1.3:CRS84' => 4326,
     ];
