@@ -4,7 +4,7 @@ namespace GeoIO\CRS;
 
 use GeoIO\CRS\Exception\UnknownDefinitionException;
 
-function def_to_srid($def)
+function def_to_srid(string $def): int
 {
     static $urnMap = array(
         'urn:ogc:def:crs:OGC:1.3:CRS84' => 4326,
@@ -46,10 +46,8 @@ function def_to_srid($def)
     throw UnknownDefinitionException::create($def);
 }
 
-function srid_to_urn($srid)
+function srid_to_urn(int $srid): string
 {
-    $srid = (int) $srid;
-
     if (4326 === $srid) {
         return 'urn:ogc:def:crs:OGC:1.3:CRS84';
     }
