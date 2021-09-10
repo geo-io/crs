@@ -1,8 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace GeoIO\CRS\Exception;
 
-class UnknownDefinitionException extends \RuntimeException
+use RuntimeException;
+
+class UnknownDefinitionException extends RuntimeException
 {
     public static function create(string $def): self
     {

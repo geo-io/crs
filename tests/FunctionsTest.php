@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace GeoIO\CRS;
 
-use PHPUnit\Framework\TestCase;
 use GeoIO\CRS\Exception\UnknownDefinitionException;
+use PHPUnit\Framework\TestCase;
 
 class FunctionsTest extends TestCase
 {

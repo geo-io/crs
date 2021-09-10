@@ -1,14 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 namespace GeoIO\CRS;
 
 use GeoIO\CRS\Exception\UnknownDefinitionException;
 
 function def_to_srid(string $def): int
 {
-    static $urnMap = array(
+    static $urnMap = [
         'urn:ogc:def:crs:OGC:1.3:CRS84' => 4326,
-    );
+    ];
 
     if (isset($urnMap[$def])) {
         return $urnMap[$def];
@@ -52,5 +54,5 @@ function srid_to_urn(int $srid): string
         return 'urn:ogc:def:crs:OGC:1.3:CRS84';
     }
 
-    return 'urn:ogc:def:crs:EPSG::'.$srid;
+    return 'urn:ogc:def:crs:EPSG::' . $srid;
 }
