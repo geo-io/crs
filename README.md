@@ -60,4 +60,4 @@ urn:ogc:def:crs:EPSG::4322
 License
 -------
 
-Geo I/O CRS is released under the [MIT License](LICENSE).
+Copyright (c) 2016-2022 Jan Sorgalla. Released under the [MIT License](LICENSE).
