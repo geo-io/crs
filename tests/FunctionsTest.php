@@ -17,7 +17,7 @@ class FunctionsTest extends TestCase
     {
         $this->assertSame(
             $srid,
-            def_to_srid($def)
+            def_to_srid($def),
         );
     }
 
@@ -38,12 +38,12 @@ class FunctionsTest extends TestCase
     {
         $this->assertSame(
             'urn:ogc:def:crs:OGC:1.3:CRS84',
-            srid_to_urn(4326)
+            srid_to_urn(4326),
         );
 
         $this->assertSame(
             'urn:ogc:def:crs:EPSG::3857',
-            srid_to_urn(3857)
+            srid_to_urn(3857),
         );
     }
 

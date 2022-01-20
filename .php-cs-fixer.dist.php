@@ -33,5 +33,9 @@ return (new PhpCsFixer\Config())
         'php_unit_method_casing' => ['case' => 'snake_case'],
         'php_unit_test_annotation' => ['style' => 'annotation'],
         'single_line_throw' => false,
+        'trailing_comma_in_multiline' => [
+            'after_heredoc' => true,
+            'elements' => ['arrays', 'arguments', 'parameters'],
+        ],
     ])
     ->setFinder($finder);

@@ -13,8 +13,8 @@ class UnknownDefinitionException extends RuntimeException
         return new self(
             sprintf(
                 'Unknown CRS definition %s',
-                json_encode($def, JSON_THROW_ON_ERROR | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE)
-            )
+                json_encode($def, JSON_THROW_ON_ERROR | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE),
+            ),
         );
     }
 }
