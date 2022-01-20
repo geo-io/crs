@@ -2,7 +2,7 @@ Geo I/O CRS
 ===========
 
 [![Build Status](https://github.com/geo-io/crs/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/geo-io/crs/actions/workflows/ci.yml)
-[![Coverage Status](https://coveralls.io/repos/geo-io/crs/badge.svg?branch=main&service=github)](https://coveralls.io/github/geo-io/crs?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/geo-io/crs/badge.svg?branch=main)](https://coveralls.io/github/geo-io/crs?branch=main)
 
 [Coordinate Reference System](https://en.wikipedia.org/wiki/Spatial_reference_system) (CRS) utilities.
 
